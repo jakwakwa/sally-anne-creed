@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-left">
+    <a *ngFor="let link of linksLeft">
+      {{link.label}}
+    </a>
+  </div>
+  <img [src]="logo" class="logo" alt="">
+  <div class="nav-right">
+    <a *ngFor="let link of linksRight">
+      {{link.label}}
+    </a>
+  </div>
+</nav>

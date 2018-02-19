@@ -1,0 +1,44 @@
+<div class="content">
+
+  <ngx-carousel
+  [inputs]="carouselBanner"
+  [moveToSlide]="1"
+  (onMove)="onmoveFn($event)">
+
+  <ngx-item NgxCarouselItem class="bannerStyle">
+
+      <div class="article">
+        <div class="image">
+          <img src="assets/img/home-page-slider-img.png"/>
+        </div>
+        <div class="text">
+          <h1 class="title">New Summer Recipe</h1>
+          <div class="excerpt">My latest book The Low-Carb Creed has just been released and is on sale now. Click on the link below to purchase your own copy.</div>
+          <button>View new recipe</button>
+        </div>
+      </div>
+
+    </ngx-item>
+
+    <ngx-item NgxCarouselItem class="bannerStyle">
+
+      <div class="article">
+        <div class="image">
+          <img src="assets/img/low-carb-creed-slider-img.jpg"/>
+        </div>
+        <div class="text">
+          <h1 class="title">The low-carb creed</h1>
+          <div class="excerpt">My latest book The Low-Carb Creed has just been released and is on sale now. Click on the link below to purchase your own copy.</div>
+          <button>Purchase Online</button>
+        </div>
+      </div>
+
+    </ngx-item>
+
+
+      <button NgxCarouselPrev class='leftRs'>&lt;</button>
+      <button NgxCarouselNext class='rightRs'>&gt;</button>
+
+  </ngx-carousel>
+
+</div>
