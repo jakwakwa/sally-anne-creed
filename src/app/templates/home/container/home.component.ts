@@ -21,6 +21,10 @@ export class HomeComponent implements OnInit {
           subFields: [ 'slideImage' ]
         },
         {
+          field: 'shop',
+          subFields: ['productImage']
+        },
+        {
           field: 'aboutProfileImg'
         },
         {

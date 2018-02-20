@@ -16,7 +16,6 @@ export class HomeSliderComponent implements OnInit {
     @Input()
     set content(value: any) {
         this._content = value;
-        console.log('Slider', this._content);
     }
 
   carouselBanner;
@@ -59,7 +58,7 @@ export class HomeSliderComponent implements OnInit {
         `
       },
       load: 0,
-      loop: true,
+      loop: false,
       touch: true
     }
   }

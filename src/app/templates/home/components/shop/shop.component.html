@@ -6,46 +6,26 @@
 
   <ngx-carousel
   [inputs]="carouselBanner"
-  [moveToSlide]="1"
+  [moveToSlide]="0"
   (onMove)="onmoveFn($event)">
 
-    <ngx-item NgxCarouselItem  class="bannerStyle">
+    <ngx-item NgxCarouselItem *ngFor="let slide of _content" class="bannerStyle">
 
       <div class="shop-content-container">
         <div class="shop-col">
-          <img src="http://via.placeholder.com/420x620">
+          <img [src]="slide.productImage[0].url">
         </div>
         <div class="shop-col">
-          <h3>The Low Carb Creed</h3>
+          <h3>{{ slide.productTitle }}</h3>
           <span>Out Now</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt!</p>
+          <div class="product-info" [innerHtml]="slide.productInfo"></div>
           <div>
-            <span class="shop-price">R230 | Buy Now</span>
+            <span class="shop-price">R{{ slide.productPrice }}.00 | Buy Now</span>
           </div>
         </div>
       </div>
 
     </ngx-item>
-
-    <ngx-item NgxCarouselItem  class="bannerStyle">
-
-        <div class="shop-content-container">
-          <div class="shop-col">
-            <img src="http://via.placeholder.com/420x620">
-          </div>
-          <div class="shop-col">
-            <h3>The Low Carb Creed (B)</h3>
-            <span>Out Now</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolor sequi deleniti necessitatibus voluptatibus, tempore aliquam dolores, ea nam in et perspiciatis fugiat tempora minima exercitationem, laboriosam dignissimos incidunt!</p>
-            <div>
-              <span class="shop-price">R230 | Buy Now</span>
-            </div>
-          </div>
-        </div>
-
-      </ngx-item>
 
     <button NgxCarouselPrev class='leftRs'>&lt;</button>
     <button NgxCarouselNext class='rightRs'>&gt;</button>

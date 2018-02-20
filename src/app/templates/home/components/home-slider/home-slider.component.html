@@ -11,7 +11,7 @@
         <div class="text">
           <h1 class="title">{{ slide.slideParagraph }}</h1>
           <div class="excerpt">{{ slide.slideTitle }}</div>
-          <button>View new recipe</button>
+          <button><a [href]="slide.ctaUrl">{{ slide.ctaText }}</a></button>
         </div>
       </div>
     </ngx-item>
