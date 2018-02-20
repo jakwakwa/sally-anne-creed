@@ -2,19 +2,18 @@
 <div class="about-container">
   <div class="about-col img-col-container">
     <!-- About main img -->
-    <img class="main-img" src="http://via.placeholder.com/350x150">
+    <img class="main-img" [src]="_about.aboutProfileImg[0].url">
     <!-- Social Media -->
     <div class="social-imgs">
-      <img src="http://via.placeholder.com/22x22">
-      <img src="http://via.placeholder.com/22x22">
-      <img src="http://via.placeholder.com/22x22">
+      <img [src]="_about.aboutFbIcon[0].url">
+      <img [src]="_about.aboutTwitterIcon[0].url">
+      <img [src]="_about.aboutInstgramIcon[0].url">
     </div>
     <div>
-      <img src="http://via.placeholder.com/172x95">
+      <img [src]="_about.aboutLogo[0].url">
     </div>
   </div>
   <div class="about-col">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae est sapiente, ipsum voluptate fugit dolorem id, consequatur perspiciatis ipsa, corrupti architecto. Adipisci animi eaque magnam doloribus, explicabo dolorum facere? Reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ab libero ea nihil quis dolorum ducimus animi tempora, itaque vitae quam, cupiditate praesentium. Iste et iure nihil itaque dolorum officia? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa perspiciatis laboriosam distinctio iure eum, beatae eos eligendi id ipsam temporibus sit. Magnam sunt animi dicta vitae ipsam tenetur enim iure?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae est sapiente, ipsum voluptate fugit dolorem id, consequatur perspiciatis ipsa, corrupti architecto. Adipisci animi eaque magnam doloribus, explicabo dolorum facere? Reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ab libero ea nihil quis dolorum ducimus animi tempora, itaque vitae quam, cupiditate praesentium. Iste et iure nihil itaque dolorum officia? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa perspiciatis laboriosam distinctio iure eum, beatae eos eligendi id ipsam temporibus sit. Magnam sunt animi dicta vitae ipsam tenetur enim iure?</p>
+    <div [innerHtml]="_about.aboutInfotext"></div>
   </div>
 </div>

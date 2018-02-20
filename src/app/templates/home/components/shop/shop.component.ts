@@ -1,24 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 
 @Component({
-  selector: 'app-home-slider',
-  templateUrl: 'home-slider.component.html',
-  styleUrls: ['home-slider.component.scss']
+  selector: 'app-shop',
+  templateUrl: 'shop.component.html',
+  styleUrls: ['shop.component.scss']
 })
-export class HomeSliderComponent implements OnInit {
-
-    // GET|SET event
-    private _content: any;
-    get content(): any {
-        return this._content;
-    }
-    @Input()
-    set content(value: any) {
-        this._content = value;
-        console.log('Slider', this._content);
-    }
-
+export class ShopComponent implements OnInit {
+      // GET|SET event
+      // private _about: any;
+      // get about(): any {
+      //     return this._about;
+      // }
+      // @Input()
+      // set about(value: any) {
+      //     this._about = value;
+      //     console.log('About Content', this._about);
+      // }
   carouselBanner;
 
   ngOnInit(){
@@ -59,7 +57,7 @@ export class HomeSliderComponent implements OnInit {
         `
       },
       load: 0,
-      loop: true,
+      loop: false,
       touch: true
     }
   }
@@ -68,5 +66,4 @@ export class HomeSliderComponent implements OnInit {
   onmoveFn(data: NgxCarouselStore) {
     console.log(data);
   }
-
 }
