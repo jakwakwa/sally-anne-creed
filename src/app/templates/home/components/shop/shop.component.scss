@@ -15,6 +15,7 @@
 
     .shop-col {
       padding: 0 20px 0 20px;
+
       h3 {
         color:  rgb(7, 182, 100);
         text-transform: uppercase;
@@ -22,16 +23,19 @@
         font-size: 22px;
         margin-top: 20px;
       }
+
       span {
         color:  rgb(7, 182, 100);
         text-transform: uppercase;
         font-weight: bold;
         font-size: 18px;
       }
+
       p {
         font-size: 16px;
         line-height: 30px;
       }
+
       div {
         margin-top: 30px;
         .shop-price {
@@ -42,39 +46,43 @@
   }
   .shop-btn-container {
     text-align: center;
+
     button {
       margin-top: 65px;
       background: rgb(7, 182, 100);
       width: 247px;
       height: 60px;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 1.1em;
     }
   }
 }
+
 .leftRs {
+  background: url('/assets/img/nav-slider-arrows-grey.png') no-repeat top left;
   position: absolute;
   margin: auto;
   top: 35%;
-  width: 50px;
-  height: 50px;
-  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-  border-radius: 999px;
+  width: 30px;
+  height: 60px;
   left: 50px;
   z-index: 999;
+  background-size: 71px 60px;
+  text-indent: -9000px;
+  cursor: pointer;
 }
 
 .rightRs {
+  background: url('/assets/img/nav-slider-arrows-grey.png') no-repeat top right;
   position: absolute;
   margin: auto;
   top: 35%;
-  width: 50px;
-  height: 50px;
-  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-  border-radius: 999px;
+  width: 30px;
+  height: 60px;
   right: 50px;
-}
-button {
-  background: none;
+  z-index: 999;
+  background-size: 71px 60px;
+  text-indent: -9000px;
+  cursor: pointer;
 }
