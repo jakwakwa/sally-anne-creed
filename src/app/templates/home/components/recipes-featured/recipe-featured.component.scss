@@ -43,16 +43,18 @@
 .article {
   position: relative;
   margin-bottom: 30px;
+  width: 625px;
+  height: 196px;
+  overflow: hidden;
   img {
     max-width: 100%;
+    width: 100%;
     display: block;
   }
   .text {
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .8);
     z-index: 2;
     color: rgb(100,100,100);
-    font-size: 22px;
-    font-weight: bold;
     text-transform: uppercase;
     text-align: left;
     position: absolute;
@@ -63,6 +65,8 @@
     transform:translateY(0%);
     .title {
       font-size: 22px;
+      font-size: 22px;
+      font-weight: 600;
     }
   }
 }
