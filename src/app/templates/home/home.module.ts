@@ -14,6 +14,7 @@ import { HomeComponent } from './container/home.component';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { AboutComponent } from './components/about/about.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { RecipeFeaturedComponent } from './components/recipes-featured/recipe-featured.component';
 
 // service
 import { HomeService } from './home.service';
@@ -24,7 +25,8 @@ import { HomeService } from './home.service';
     HomeComponent,
     HomeSliderComponent,
     AboutComponent,
-    ShopComponent
+    ShopComponent,
+    RecipeFeaturedComponent
   ],
   imports: [
     CommonModule,
