@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RecipeFeatured } from '../../models/recipe-featured.interface';
 
 @Component({
   selector: 'app-recipe-featured',
@@ -8,12 +9,12 @@ import { Component, Input } from '@angular/core';
 export class RecipeFeaturedComponent {
 
   // GET|SET event
-  private _recipes: any;
-  get recipes(): any {
+  private _recipes: Array<RecipeFeatured>;
+  get recipes(): Array<RecipeFeatured> {
       return this._recipes;
   }
   @Input()
-  set recipes(value: any) {
+  set recipes(value: Array<RecipeFeatured>) {
       this._recipes = value;
   }
 

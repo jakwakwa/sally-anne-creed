@@ -40,7 +40,15 @@ export class HomeComponent implements OnInit {
 
     });
 
-    this.homeService.getApp().content.subscribe('recipes', { orderByChild: 'recipeFeatured', equalTo: true }, (error, content) => {
+    this.homeService.getApp().content.subscribe('recipes', {
+      orderByChild: 'recipeFeatured',
+      equalTo: true,
+      populate: [
+        {
+          field: 'recipeMainImg'
+        }
+      ]
+     }, (error, content) => {
       if (error) {
         console.error(error);
       }

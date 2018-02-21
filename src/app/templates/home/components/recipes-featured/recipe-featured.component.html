@@ -7,10 +7,10 @@
     <div *ngFor="let recipe of _recipes;">
       <div class="article">
         <div class="image">
-          <img src="/assets/img/health-recipe-2-2.jpg"/>
+          <img src="{{ recipe?.recipeMainImg[0].url }}"/>
         </div>
         <div class="text">
-          <div class="title">Dummy Recipe 1</div>
+          <div class="title">{{ recipe.recipeTitle }}</div>
         </div>
         <img class="featured-arrow" src="/assets/img/arrow.svg">
       </div>
