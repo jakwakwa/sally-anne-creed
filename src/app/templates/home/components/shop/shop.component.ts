@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
+import { ShopProduct } from '../../models/shop.interface';
 
 @Component({
   selector: 'app-shop',
@@ -9,12 +10,12 @@ import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 export class ShopComponent implements OnInit {
 
   // GET|SET event
-  private _content: any;
-  get content(): any {
+  private _content: Array<ShopProduct>;
+  get content(): Array<ShopProduct> {
       return this._content;
   }
   @Input()
-  set content(value: any) {
+  set content(value: Array<ShopProduct>) {
       this._content = value;
       // console.log('ShopSlider', this._content);
   }

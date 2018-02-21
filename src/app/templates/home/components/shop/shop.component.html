@@ -1,16 +1,12 @@
 <div class="shop-container section-space">
-
   <div class="title-container">
     <h2>Shop</h2>
   </div>
-
   <ngx-carousel
   [inputs]="carouselBanner"
   [moveToSlide]="0"
   (onMove)="onmoveFn($event)">
-
-    <ngx-item NgxCarouselItem *ngFor="let slide of _content" class="bannerStyle">
-
+    <ngx-item NgxCarouselItem *ngFor="let slide of content" class="bannerStyle">
       <div class="shop-content-container">
         <div class="shop-col">
           <img [src]="slide.productImage[0].url">
@@ -24,15 +20,11 @@
           </div>
         </div>
       </div>
-
     </ngx-item>
-
     <button NgxCarouselPrev class='leftRs'>&lt;</button>
     <button NgxCarouselNext class='rightRs'>&gt;</button>
   </ngx-carousel>
-
   <div class="shop-btn-container">
     <button>Shop All Products</button>
   </div>
-
 </div>

@@ -18,7 +18,7 @@ export class AboutComponent {
   @Input()
   set about(value: AboutContent) {
       this._about = value;
-      console.log('About Content', this._about);
+      // console.log('About Content', this._about);
   }
 
   constructor() {
