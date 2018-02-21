@@ -26,19 +26,8 @@ export class HomeComponent implements OnInit {
           subFields: ['productImage']
         },
         {
-          field: 'aboutProfileImg'
-        },
-        {
-          field: 'aboutFbIcon'
-        },
-        {
-          field: 'aboutTwitterIcon'
-        },
-        {
-          field: 'aboutInstgramIcon'
-        },
-        {
-          field: 'aboutLogo'
+          field: 'about',
+          subFields: ['profileImg', 'facebookIcon', 'twitterIcon', 'instagramIcon', 'credentialLogo']
         }
       ]
     }, (error, content) => {

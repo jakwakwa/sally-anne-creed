@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+// import model
+import { AboutContent } from '../../models/about.interface';
+
 @Component({
   selector: 'app-about',
   templateUrl: 'about.component.html',
@@ -8,15 +11,18 @@ import { Component, Input } from '@angular/core';
 export class AboutComponent {
 
   // GET|SET event
-  private _about: any;
-  get about(): any {
+  private _about: AboutContent;
+  get about(): AboutContent {
       return this._about;
   }
   @Input()
-  set about(value: any) {
+  set about(value: AboutContent) {
       this._about = value;
+      console.log('About Content', this._about);
   }
 
-  constructor() {}
+  constructor() {
+    this.about = {}
+  }
 
 }
