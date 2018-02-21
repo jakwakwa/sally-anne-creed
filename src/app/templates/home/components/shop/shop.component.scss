@@ -31,8 +31,6 @@
         font-size: 18px;
       }
 
-
-
       div {
         margin-top: 30px;
         .shop-price {
@@ -58,31 +56,27 @@
 
 .leftRs {
   background: url('/assets/img/nav-slider-arrows-grey.png') no-repeat top left;
+  left: 50px;
+}
+
+.rightRs {
+  background: url('/assets/img/nav-slider-arrows-grey.png') no-repeat top right;
+  right: 50px;
+}
+
+.leftRs,
+.rightRs {
   position: absolute;
   margin: auto;
   top: 35%;
   width: 30px;
   height: 60px;
-  left: 50px;
   z-index: 999;
   background-size: 71px 60px;
   text-indent: -9000px;
   cursor: pointer;
 }
 
-.rightRs {
-  background: url('/assets/img/nav-slider-arrows-grey.png') no-repeat top right;
-  position: absolute;
-  margin: auto;
-  top: 35%;
-  width: 30px;
-  height: 60px;
-  right: 50px;
-  z-index: 999;
-  background-size: 71px 60px;
-  text-indent: -9000px;
-  cursor: pointer;
-}
 p {
   font-size: 16px;
   line-height: 40px;
