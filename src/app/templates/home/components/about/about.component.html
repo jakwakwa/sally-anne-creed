@@ -4,16 +4,14 @@
   </div>
   <div class="about-content-container">
     <div class="about-col img-col-container">
-      <!-- About main img -->
-      <img class="main-img" [src]="about?.profileImg[0].url">
-      <!-- Social Media -->
+      <img class="main-img" src="{{about?.profileImg[0].url}}">
       <div class="social-imgs">
-        <img [src]="about?.facebookIcon[0].url">
-        <img [src]="about?.twitterIcon[0].url">
-        <img [src]="about?.instagramIcon[0].url">
+        <img src="{{about?.facebookIcon[0].url}}">
+        <img src="{{about?.twitterIcon[0].url}}">
+        <img src="{{about?.instagramIcon[0].url}}">
       </div>
       <div>
-        <img class="about-logo" [src]="about?.credentialLogo[0].url">
+        <img class="about-logo" src="{{about?.credentialLogo[0].url}}">
       </div>
     </div>
     <div class="about-col">

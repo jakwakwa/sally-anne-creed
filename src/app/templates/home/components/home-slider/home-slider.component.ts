@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
+import { Slider } from '../../models/slider.interface';
 
 @Component({
   selector: 'app-home-slider',
@@ -9,12 +10,12 @@ import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 export class HomeSliderComponent implements OnInit {
 
     // GET|SET event
-    private _content: any;
-    get content(): any {
+    private _content: Array<Slider>;
+    get content(): Array<Slider> {
         return this._content;
     }
     @Input()
-    set content(value: any) {
+    set content(value: Array<Slider>) {
         this._content = value;
     }
 
