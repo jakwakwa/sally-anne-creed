@@ -6,7 +6,7 @@ import { AngularFireLiteApp } from 'angularfire-lite';
 export class HomeService {
 
   // GET|SET _flApp
-  private _flApp: any;
+  private _flApp: any = {};
   get flApp(): any {
       return this._flApp;
   }
@@ -15,7 +15,7 @@ export class HomeService {
   }
 
   constructor(private _fa: AngularFireLiteApp) {
-    console.log(_fa.instance());
+    // console.log(_fa.instance());
 
     this.flApp = flamelink({
       firebaseApp: _fa.instance(),

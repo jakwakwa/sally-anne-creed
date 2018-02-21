@@ -16,7 +16,7 @@ export class ShopComponent implements OnInit {
   @Input()
   set content(value: any) {
       this._content = value;
-      console.log('ShopSlider', this._content);
+      // console.log('ShopSlider', this._content);
   }
 
   carouselBanner;

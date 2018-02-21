@@ -39,7 +39,7 @@ export class HomeSliderComponent implements OnInit {
             overflow: auto;
             position: absolute;
             width: 100%;
-            bottom: 20px;
+            top: 615px;
             left: 0;
             box-sizing: border-box;
           }

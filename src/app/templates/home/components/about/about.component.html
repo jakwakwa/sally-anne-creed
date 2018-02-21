@@ -5,19 +5,19 @@
   <div class="about-content-container">
     <div class="about-col img-col-container">
       <!-- About main img -->
-      <img class="main-img" [src]="_about.aboutProfileImg[0].url">
+      <img *ngIf="about.aboutProfileImg" class="main-img" [src]="about.aboutProfileImg[0].url">
       <!-- Social Media -->
       <div class="social-imgs">
-        <img [src]="_about.aboutFbIcon[0].url">
-        <img [src]="_about.aboutTwitterIcon[0].url">
-        <img [src]="_about.aboutInstgramIcon[0].url">
+        <img *ngIf="about.aboutFbIcon" [src]="about.aboutFbIcon[0].url">
+        <img *ngIf="about.aboutTwitterIcon" [src]="about.aboutTwitterIcon[0].url">
+        <img *ngIf="about.aboutInstgramIcon" [src]="about.aboutInstgramIcon[0].url">
       </div>
       <div>
-        <img class="about-logo" [src]="_about.aboutLogo[0].url">
+        <img class="about-logo" *ngIf="about.aboutLogo" [src]="about.aboutLogo[0].url">
       </div>
     </div>
     <div class="about-col">
-      <div [innerHtml]="_about.aboutInfotext"></div>
+      <div [innerHtml]="about.aboutInfotext"></div>
     </div>
   </div>
 </div>

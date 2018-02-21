@@ -30,7 +30,7 @@
     color: white;
     text-align: center;
     position: absolute;
-    top: 43%;
+    top: 450px;
     left: 0;
     right: 0;
     padding: 1rem;
@@ -65,30 +65,28 @@
     }
   }
 }
+
 .leftRs {
   background: url('/assets/img/nav-slider-arrows-02.png') no-repeat top left;
+  left: 50px;
+}
+
+.rightRs {
+  background: url('/assets/img/nav-slider-arrows-02.png') no-repeat top right;
+  right: 50px;
+}
+
+.leftRs,
+.rightRs {
   position: absolute;
   margin: auto;
-  top: 35%;
+  top: 350px;
   width: 30px;
   height: 60px;
-  left: 50px;
   z-index: 999;
   background-size: 71px 60px;
   text-indent: -9000px;
   cursor: pointer;
 }
 
-.rightRs {
-  background: url('/assets/img/nav-slider-arrows-02.png') no-repeat top right;
-  position: absolute;
-  margin: auto;
-  top: 35%;
-  width: 30px;
-  height: 60px;
-  right: 50px;
-  z-index: 999;
-  background-size: 71px 60px;
-  text-indent: -9000px;
-  cursor: pointer;
-}
+

@@ -4,46 +4,22 @@
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero, quam dolor eligendi quas esse dolore molestias quae veniam similique delectus perferendis blanditiis fugiat nemo.</p>
   </div>
   <div class="recipeFeat-content">
-    <div class="article">
-      <div class="image">
-        <img src="/assets/img/health-recipe-2-2.jpg"/>
+    <div *ngFor="let recipe of _recipes;">
+      <div class="article">
+        <div class="image">
+          <img src="/assets/img/health-recipe-2-2.jpg"/>
+        </div>
+        <div class="text">
+          <div class="title">Dummy Recipe 1</div>
+        </div>
+        <img class="featured-arrow" src="/assets/img/arrow.svg">
       </div>
-      <div class="text">
-        <div class="title">Dummy Recipe 1</div>
-      </div>
-      <img class="featured-arrow" src="/assets/img/arrow.svg">
-    </div>
-    <div class="article">
-      <div class="image">
-        <img src="http://lorempixel.com/400/200/sports" />
-      </div>
-      <div class="text">
-        <div class="title">Dummy Recipe 2</div>
-      </div>
-      <img class="featured-arrow" src="/assets/img/arrow.svg">
-    </div>
-    <div class="article">
-      <div class="image">
-        <img src="http://lorempixel.com/400/200/sports/1"/>
-      </div>
-      <div class="text">
-        <div class="title">Dummy Recipe 3</div>
-      </div>
-      <img class="featured-arrow" src="/assets/img/arrow.svg">
-    </div>
-    <div class="article">
-      <div class="image">
-        <img src="http://lorempixel.com/400/200/"/>
-      </div>
-      <div class="text">
-        <div class="title">Dummy Recipe 4</div>
-      </div>
-      <img class="featured-arrow" src="/assets/img/arrow.svg">
     </div>
   </div>
   <div class="recipeFeat-btn-container">
     <button>All Recipes</button>
   </div>
 </div>
+
 
 

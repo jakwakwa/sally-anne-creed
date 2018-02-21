@@ -6,14 +6,17 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['about.component.scss']
 })
 export class AboutComponent {
-      // GET|SET event
-      private _about: any;
-      get about(): any {
-          return this._about;
-      }
-      @Input()
-      set about(value: any) {
-          this._about = value;
-          console.log('About Content', this._about);
-      }
+
+  // GET|SET event
+  private _about: any;
+  get about(): any {
+      return this._about;
+  }
+  @Input()
+  set about(value: any) {
+      this._about = value;
+  }
+
+  constructor() {}
+
 }

@@ -10,6 +10,7 @@ import { HomeService } from '../home.service';
 export class HomeComponent implements OnInit {
 
   data: any = {};
+  recipeData: any = [];
 
   constructor(private homeService: HomeService) { }
 
@@ -45,8 +46,18 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
 
-      console.log('home', content);
+      // console.log('home', content);
       this.data = content;
+
+    });
+
+    this.homeService.getApp().content.subscribe('recipes', { orderByChild: 'recipeFeatured', equalTo: true }, (error, content) => {
+      if (error) {
+        console.error(error);
+      }
+
+      // console.log('recipes', content);
+      this.recipeData = Object.keys(content).map(key => content[key]);
 
     });
   }
