@@ -52,7 +52,7 @@
     display: block;
   }
   .text {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .9);
     z-index: 2;
     color: rgb(100,100,100);
     text-transform: uppercase;
@@ -68,5 +68,12 @@
       font-size: 22px;
       font-weight: 600;
     }
+  }
+  .featured-arrow {
+    width: 40px;
+    position: absolute;
+    z-index: 999;
+    top: 130px;
+    right: 30px;
   }
 }
