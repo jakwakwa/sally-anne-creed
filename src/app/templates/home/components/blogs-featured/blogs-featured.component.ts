@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Featured } from '../../models/featured.interface';
 
 @Component({
   selector: 'app-blogs-featured',
@@ -7,12 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class BlogsFeaturedComponent {
   // GET|SET event
-  private _content: any;
-  get content(): any {
+  private _content: Array<Featured>;
+  get content(): Array<Featured> {
       return this._content;
   }
   @Input()
-  set content(value: any) {
+  set content(value: Array<Featured>) {
       this._content = value;
   }
 }
