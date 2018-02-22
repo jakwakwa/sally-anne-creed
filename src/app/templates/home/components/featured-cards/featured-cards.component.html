@@ -1,0 +1,17 @@
+<div class="content clearfix">
+  <div *ngFor="let item of content;">
+    <div class="article"
+    [class.main]="item.mainFeatured">
+      <!-- <div *ngIf="item.mainFeatured">
+          <div>main article</div>
+      </div> -->
+      <div class="image">
+        <img src="{{ item?.mainImg[0].url }}"/>
+      </div>
+      <div class="text">
+        <div class="title">{{ item.title }}</div>
+      </div>
+      <img class="featured-arrow" src="/assets/img/arrow.svg">
+    </div>
+  </div>
+</div>

@@ -9,13 +9,13 @@ import { RecipeFeatured } from '../../models/recipe-featured.interface';
 export class RecipeFeaturedComponent {
 
   // GET|SET event
-  private _recipes: Array<RecipeFeatured>;
-  get recipes(): Array<RecipeFeatured> {
-      return this._recipes;
+  private _content: Array<RecipeFeatured>;
+  get content(): Array<RecipeFeatured> {
+      return this._content;
   }
   @Input()
-  set recipes(value: Array<RecipeFeatured>) {
-      this._recipes = value;
+  set content(value: Array<RecipeFeatured>) {
+      this._content = value;
   }
 
 }

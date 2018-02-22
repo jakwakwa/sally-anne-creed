@@ -106,5 +106,16 @@ h4 {
   display: inline-block;
   line-height: 1;
 }
-
-
+/* Featured Buttons */
+.feat-btn-container {
+  text-align: center;
+}
+.feat-btn-container button {
+  margin-top: 0px;
+  background: rgb(0, 0, 0);
+  width: 247px;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1em;
+}
