@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   data: any = {};
   recipeData: any = [];
+  courseData: any = [];
 
   constructor(private homeService: HomeService) { }
 
@@ -55,6 +56,24 @@ export class HomeComponent implements OnInit {
 
       // console.log('recipes', content);
       this.recipeData = Object.keys(content).map(key => content[key]);
+
+    });
+
+    this.homeService.getApp().content.subscribe('courses', {
+      orderByChild: 'courseFeatured',
+      equalTo: true,
+      populate: [
+        {
+          field: 'courseMainImg'
+        }
+      ]
+     }, (error, content) => {
+      if (error) {
+        console.error(error);
+      }
+
+      // console.log('recipes', content);
+      this.courseData = Object.keys(content).map(key => content[key]);
 
     });
   }

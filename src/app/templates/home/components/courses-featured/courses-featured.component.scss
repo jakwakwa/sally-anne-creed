@@ -1,11 +1,11 @@
-.recipeFeat-container {
-  background: url('/assets/img/shop-bg.png');
+.coursesFeat-container {
+  // background: url('/assets/img/shop-bg.png');
   height: auto;
   background-repeat: repeat;
 
   h2 {
-    color: rgb(221, 38, 135);
-    border-bottom: 2px solid rgb(221, 38, 135);
+    color: rgb(62,169,203);
+    border-bottom: 2px solid rgb(62,169,203);
   }
 
   p {
@@ -13,7 +13,7 @@
     margin: 0 auto;
   }
 
-  .recipeFeat-content {
+  .coursesFeat-content {
     text-align: center;
     margin: 0 auto;
     margin-top: 60px;
@@ -24,12 +24,12 @@
     justify-content: space-evenly;
   }
 
-  .recipeFeat-btn-container {
+  .coursesFeat-btn-container {
     text-align: center;
 
     button {
       margin-top: 0px;
-      background: rgb(221, 38, 135);
+      background: rgb(62,169,203);
       width: 247px;
       height: 60px;
       text-transform: uppercase;
@@ -44,36 +44,42 @@
   position: relative;
   margin-bottom: 30px;
   width: 625px;
-  height: 196px;
+  // height: 196px;
   overflow: hidden;
-  img {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-  }
+  display: flex;
+  border: 1px solid rgb(62,169,203);
+  width: 626px;
+
   .text {
-    background: rgba(255, 255, 255, .9);
-    z-index: 2;
-    color: rgb(100,100,100);
-    text-transform: uppercase;
     text-align: left;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 30px;
-    transform:translateY(0%);
-    .title {
+
+    h3 {
+      color: rgb(62,169,203);
+      text-transform: uppercase;
       font-size: 22px;
-      font-size: 22px;
+      margin: 0;
+      margin-bottom: 30px;
       font-weight: 600;
     }
   }
-  .featured-arrow {
-    width: 40px;
-    position: absolute;
-    z-index: 999;
-    top: 130px;
-    right: 30px;
+
+  .image {
+    img {
+      width: auto;
+      height: 423px;
+    }
   }
+  .text,
+  .image {
+    &.col {
+      width: 50%;
+    }
+  }
+
+  .featured-arrow {
+    margin-left: -10px;
+    width: 40px;
+  }
+
 }
