@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
+import { FormsModule } from '@angular/forms';
 
 // imports for services (from firebase)
 import { firebaseConfig } from '../../app.firebase.config';
@@ -19,6 +20,7 @@ import { FeaturedCardsComponent } from './components/featured-cards/featured-car
 import { CoursesFeaturedComponent } from './components/courses-featured/courses-featured.component';
 import { RecipeFeaturedComponent } from './components/recipes-featured/recipe-featured.component';
 import { BlogsFeaturedComponent } from './components/blogs-featured/blogs-featured.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 // service
 import { HomeService } from './home.service';
@@ -34,11 +36,13 @@ import { HomeService } from './home.service';
     CoursesFeaturedComponent,
     RecipeFeaturedComponent,
     BlogsFeaturedComponent,
-    FeaturedCardsComponent
+    FeaturedCardsComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     NgxCarouselModule,
+    FormsModule,
     AngularFireLite.forRoot(firebaseConfig)
   ],
   exports: [

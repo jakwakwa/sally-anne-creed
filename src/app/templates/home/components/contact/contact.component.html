@@ -1,0 +1,54 @@
+<div class="mailer-container section-space">
+  <div class="title-container">
+    <h2>Contact</h2>
+  </div>
+  <div class="contactForm-container">
+    <form #form="ngForm" novalidate>
+      <div class="input-container">
+        <div class="input">
+          <label for="name">Name &amp; Surname</label>
+          <input
+            type="text"
+            name="contact_name"
+            id="name"
+            ngModel
+            placeholder="Name &amp; Surname">
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="contact_email"
+            ngModel
+            id="email"
+            placeholder="Email">
+        </div>
+        <div class="input">
+          <label for="contact">Contact Number</label>
+          <input
+            type="text"
+            name="contact_number"
+            ngModel
+            id="contact"
+            placeholder="Contact Number">
+        </div>
+        <div class="input">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            name="contact_subject"
+            ngModel
+            id="subject"
+            placeholder="Subject">
+        </div>
+      </div>
+      <textarea
+        name="contact_textarea"
+        ngModel
+        rows="5"
+        >
+      </textarea>
+      {{ form.value | json }}
+    </form>
+  </div>
+</div>
