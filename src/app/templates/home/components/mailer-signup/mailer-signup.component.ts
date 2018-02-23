@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: 'mailer-signup.component.html',
   styleUrls: ['mailer-signup.component.scss']
 })
-export class MailerSignupComponent {
-
-}
+export class MailerSignupComponent {}
