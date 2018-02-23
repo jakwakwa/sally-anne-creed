@@ -48,7 +48,8 @@
         rows="5"
         >
       </textarea>
-      {{ form.value | json }}
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+      <div><pre>{{ form.value | json }}</pre></div>
     </form>
   </div>
 </div>
