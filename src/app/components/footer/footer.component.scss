@@ -1,0 +1,76 @@
+.toTop-container {
+  background: url('/assets/img/back-to-top-background.png');
+  padding: 70px 0px 70px 0px;
+  text-align: center;
+
+  .toTop-btn {
+    margin-top: 0px;
+    background: rgb(185,19,50);
+    width: 247px;
+    height: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background: url('/assets/img/wall-texture-bg.png');
+  padding: 0 110px 85px 110px;
+
+  .company-container {
+
+    .footer-logo {
+      height: 171px;
+      width: 120px;
+    }
+
+    .social-container {
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        margin: 40px 30px 40px 0px;
+      }
+    }
+
+    .copyright-container {
+
+      .terms {
+        color: rgb(185,19,50);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 24px;
+
+        .company-name {
+          color: rgb(185,19,50);
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .small-section-container {
+    margin-top: 60px;
+
+    .footer-headings {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+}
+
+
