@@ -1,0 +1,64 @@
+.mailer-container {
+  background: url('/assets/img/mailer-bg.png');
+  height: auto;
+  background-repeat: repeat;
+
+  h2 {
+    color: rgb(156,89,89);
+    border-bottom: 2px solid rgb(156,89,89);
+  }
+  p {
+    color: rgb(156,89,89);
+  }
+  .title-container {
+    position: relative;
+
+    .mailer-input-container {
+      position: relative;
+
+      .mailer-input {
+        background: none;
+        border-bottom: 2px solid rgb(156,89,89);
+        width: 700px;
+        margin-top: 30px;
+        height: auto;
+        color: rgb(156,89,89);
+        font-size: 48px;
+      }
+
+      .mailer-button {
+        background: url('/assets/img/arrow-rose.svg') no-repeat top right;
+        position: absolute;
+        margin: auto;
+        bottom: 25px;
+        width: 30px;
+        height: 30px;
+        z-index: 999;
+        background-size: 40px 40px;
+        text-indent: -9000px;
+        cursor: pointer;
+        margin-left: -40px;
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: rgba(150,102,104,0.17);
+  font-size: 48px;
+}
+
+::-moz-placeholder {
+  color: rgba(150,102,104,0.17);
+  font-size: 48px;
+}
+
+:-ms-input-placeholder {
+  color: rgba(150,102,104,0.17);
+  font-size: 48px;
+}
+
+:-moz-placeholder {
+  color: rgba(150,102,104,0.17);
+  font-size: 48px;
+}

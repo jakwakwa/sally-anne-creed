@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { PageComponent } from './container/page.component';
 // components
 import { HeaderComponent } from './components/header/header.component';
+import { MailerSignupComponent } from '../../components/mailer-signup/mailer-signup.component';
+import { MailerSignupModule } from '../../components/mailer-signup/mailer-signup.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MailerSignupModule
   ],
   exports: [
     PageComponent

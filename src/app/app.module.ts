@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+
 // Routing
 import { HomeComponent } from './templates/home/container/home.component';
 import { PageComponent } from './templates/page/container/page.component';

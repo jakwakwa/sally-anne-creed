@@ -15,7 +15,7 @@ import { HomeComponent } from './container/home.component';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { AboutComponent } from './components/about/about.component';
 import { ShopComponent } from './components/shop/shop.component';
-import { MailerSignupComponent } from './components/mailer-signup/mailer-signup.component';
+import { MailerSignupComponent } from '../../components/mailer-signup/mailer-signup.component';
 import { FeaturedCardsComponent } from './components/featured-cards/featured-cards.component';
 import { CoursesFeaturedComponent } from './components/courses-featured/courses-featured.component';
 import { RecipeFeaturedComponent } from './components/recipes-featured/recipe-featured.component';
@@ -24,6 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 
 // service
 import { HomeService } from './home.service';
+import { MailerSignupModule } from '../../components/mailer-signup/mailer-signup.module';
 
 
 @NgModule({
@@ -32,7 +33,6 @@ import { HomeService } from './home.service';
     HomeSliderComponent,
     AboutComponent,
     ShopComponent,
-    MailerSignupComponent,
     CoursesFeaturedComponent,
     RecipeFeaturedComponent,
     BlogsFeaturedComponent,
@@ -43,7 +43,8 @@ import { HomeService } from './home.service';
     CommonModule,
     NgxCarouselModule,
     FormsModule,
-    AngularFireLite.forRoot(firebaseConfig)
+    AngularFireLite.forRoot(firebaseConfig),
+    MailerSignupModule
   ],
   exports: [
     HomeComponent
