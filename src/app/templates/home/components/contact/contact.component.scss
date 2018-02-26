@@ -18,7 +18,7 @@
 
       .input {
         position: relative;
-        margin-bottom: 15px;
+        margin-top: 25px;
 
         label {
           color: rgb(100, 100, 100);
@@ -32,7 +32,7 @@
     .submit-btn {
       display: block;
       margin: 0 auto;
-      margin-top: 0px;
+      margin-top: 60px;
       background: rgb(50,210,155);
       width: 247px;
       height: 60px;
@@ -50,12 +50,17 @@ textarea {
   border: 1px solid rgb(204,204,204);
   width: 405px;
   padding: 11px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+.message-area {
+  margin-top: 15px;
+  display: block;
 }
 
 textarea {
   width: 100%;
-  margin-bottom: 60px;
+  margin-top: 10px;
 }
 
 ::-webkit-input-placeholder {
@@ -72,4 +77,11 @@ textarea {
 
 :-moz-placeholder {
   color: rgb(204,204,204);
+}
+
+.error {
+  color: #da6969;
+  font-size: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -11,45 +11,74 @@
             type="text"
             name="contact_name"
             id="name"
+            required
+            #contactName="ngModel"
             ngModel
             placeholder="Name &amp; Surname">
+            <div *ngIf="contactName.errors?.required && contactName.dirty" class="error">
+              Name and Surname is required
+            </div>
         </div>
         <div class="input">
           <label for="email">Email</label>
           <input
             type="text"
             name="contact_email"
+            required
+            #contactEmail="ngModel"
             ngModel
             id="email"
             placeholder="Email">
+            <div *ngIf="contactEmail.errors?.required && contactEmail.dirty" class="error">
+              Email is required
+            </div>
         </div>
         <div class="input">
           <label for="contact">Contact Number</label>
           <input
             type="text"
             name="contact_number"
+            required
+            #contactNumber="ngModel"
             ngModel
             id="contact"
             placeholder="Contact Number">
+            <div *ngIf="contactNumber.errors?.required && contactNumber.dirty" class="error">
+              Contact number is required
+            </div>
         </div>
         <div class="input">
           <label for="subject">Subject</label>
           <input
             type="text"
             name="contact_subject"
+            required
+            #contactSubject="ngModel"
             ngModel
             id="subject"
             placeholder="Subject">
+            <div *ngIf="contactSubject.errors?.required && contactSubject.dirty" class="error">
+              Subject is required
+            </div>
         </div>
       </div>
+      <label class="message-area" for="message">Message</label>
       <textarea
         name="contact_textarea"
+        required
+        #contactMessage="ngModel"
         ngModel
         rows="5"
+        id="message"
         >
       </textarea>
+      <div *ngIf="contactMessage.errors?.required && contactMessage.dirty" class="error">
+        Message is required
+      </div>
       <button class="submit-btn" type="submit" [disabled]="form.invalid">Submit</button>
-      <div><pre>{{ form.value | json }}</pre></div>
+      <!-- <div><pre>{{ form.value | json }}</pre></div> -->
+      <div>Valid: {{ form.valid | json }}</div>
+      <div>Invalid: {{ form.invalid | json }}</div>
     </form>
   </div>
 </div>
