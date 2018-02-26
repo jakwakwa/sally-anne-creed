@@ -6,7 +6,7 @@
     <form #form="ngForm" novalidate (ngSubmit)="onSubmit(form.value, form.valid)">
       <div class="input-container">
         <div class="input">
-          <label for="name">Name &amp; Surname</label>
+          <label for="name">Name &amp; Surname<span>*</span></label>
           <input
             type="text"
             name="contact_name"
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="input">
-          <label for="email">Email</label>
+          <label for="email">Email<span>*</span></label>
           <input
             type="text"
             name="contact_email"
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="input">
-          <label for="contact">Contact Number</label>
+          <label for="contact">Contact Number<span>*</span></label>
           <input
             type="text"
             name="contact_number"
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="input">
-          <label for="subject">Subject</label>
+          <label for="subject">Subject<span>*</span></label>
           <input
             type="text"
             name="contact_subject"
@@ -61,20 +61,24 @@
               Subject is required
             </div>
         </div>
+        <div class="input grow">
+          <label for="message">Message<span>*</span></label>
+          <textarea
+            name="contact_textarea"
+            required
+            #contactMessage="ngModel"
+            ngModel
+            rows="5"
+            id="message"
+            placeholder="Type your message here"
+            >
+          </textarea>
+          <div *ngIf="contactMessage.errors?.required && contactMessage.dirty" class="error">
+            Message is required
+          </div>
+        </div>
       </div>
-      <label class="message-area" for="message">Message</label>
-      <textarea
-        name="contact_textarea"
-        required
-        #contactMessage="ngModel"
-        ngModel
-        rows="5"
-        id="message"
-        >
-      </textarea>
-      <div *ngIf="contactMessage.errors?.required && contactMessage.dirty" class="error">
-        Message is required
-      </div>
+
       <button class="submit-btn" type="submit" [disabled]="form.invalid">Submit</button>
     </form>
   </div>

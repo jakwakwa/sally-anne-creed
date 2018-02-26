@@ -18,13 +18,29 @@
 
       .input {
         position: relative;
-        margin-top: 25px;
+        margin-top: 40px;
+
+        &.grow {
+          flex-grow: 1;
+        }
 
         label {
           color: rgb(100, 100, 100);
           position: absolute;
-          top: -10px;
+          top: -12px;
           font-size: 16px;
+          margin-bottom: 10px;
+          display: block;
+
+          span {
+            color: rgb(50,210,155);
+            font-size: 22px;
+            padding: 0;
+            line-height: 0;
+            margin-top: 13px;
+            display: block;
+            float: right;
+          }
         }
       }
     }
@@ -57,14 +73,8 @@ textarea {
   margin: 20px 0px 0px 0px;
 }
 
-.message-area {
-  margin-top: 15px;
-  display: block;
-}
-
 textarea {
   width: 100%;
-  margin-top: 10px;
 }
 
 ::-webkit-input-placeholder {
