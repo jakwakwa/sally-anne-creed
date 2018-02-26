@@ -9,7 +9,9 @@ export class ContactComponent {
 
   constructor() {}
 
-  onSubmit() {
-    console.log('submit button pressed')
+  onSubmit(contactForm: any, isValid: boolean) {
+    if (isValid) {
+      console.log(contactForm);
+    }
   };
 }

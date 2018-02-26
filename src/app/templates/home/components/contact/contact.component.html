@@ -3,7 +3,7 @@
     <h2>Contact</h2>
   </div>
   <div class="contactForm-container">
-    <form #form="ngForm" novalidate (ngSubmit)="onSubmit()">
+    <form #form="ngForm" novalidate (ngSubmit)="onSubmit(form.value, form.valid)">
       <div class="input-container">
         <div class="input">
           <label for="name">Name &amp; Surname</label>
@@ -76,9 +76,6 @@
         Message is required
       </div>
       <button class="submit-btn" type="submit" [disabled]="form.invalid">Submit</button>
-      <!-- <div><pre>{{ form.value | json }}</pre></div> -->
-      <div>Valid: {{ form.valid | json }}</div>
-      <div>Invalid: {{ form.invalid | json }}</div>
     </form>
   </div>
 </div>

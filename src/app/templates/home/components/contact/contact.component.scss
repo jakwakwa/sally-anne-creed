@@ -40,6 +40,10 @@
       font-weight: 600;
       font-size: 1.1em;
     }
+    .submit-btn:disabled {
+      cursor: not-allowed;
+      background: #a6c7bc;
+    }
   }
 }
 
