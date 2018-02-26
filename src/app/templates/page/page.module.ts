@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 
 // containers
 import { PageComponent } from './container/page.component';
+// components
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
-    PageComponent
+    PageComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule
