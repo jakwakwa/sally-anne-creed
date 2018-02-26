@@ -5,13 +5,16 @@ import { CommonModule } from '@angular/common';
 import { PageComponent } from './container/page.component';
 // components
 import { HeaderComponent } from './components/header/header.component';
-import { MailerSignupComponent } from '../../components/mailer-signup/mailer-signup.component';
 import { MailerSignupModule } from '../../components/mailer-signup/mailer-signup.module';
+import { ArticleIntroComponent } from './components/article-intro/article-intro.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     PageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ArticleIntroComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
