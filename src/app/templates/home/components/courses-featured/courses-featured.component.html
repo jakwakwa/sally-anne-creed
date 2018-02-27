@@ -4,14 +4,14 @@
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero, quam dolor eligendi quas esse dolore molestias quae veniam similique delectus perferendis blanditiis fugiat nemo.</p>
     </div>
     <div class="coursesFeat-content">
-      <div *ngFor="let course of _courses;">
+      <div *ngFor="let course of courses;">
         <div class="article">
           <div class="text col">
-            <h3>{{ course.courseTitle }}</h3>
-            <p [innerHtml]="course.courseIntro"></p>
+            <h3>{{ course.title }}</h3>
+            <p [innerHtml]="course.contentIntro"></p>
             <img class="featured-arrow" src="/assets/img/arrow-blue.svg" alt="">
           </div>
-          <div class="image col"><img src="{{ course.courseMainImg[0].url }}" alt=""></div>
+          <div class="image col"><img src="{{ course.mainImg[0].url }}" alt=""></div>
         </div>
       </div>
     </div>

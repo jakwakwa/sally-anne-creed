@@ -4,7 +4,7 @@
     <img src="{{ item?.mainImg[0].url }}">
   </div>
   <div class="content-container">
-    <h2 class="title">{{ item.title }}</h2>
+    <h2 class="title">{{ item?.title }}</h2>
     <p class="meta">Posted by {{ item.author }} on {{ item.__meta__.createdDate | date: 'd MMMM y' }} in {{ item.category[0].categoryName }}</p>
     <p class="article-text" [innerHtml]="item.contentIntro"></p>
     <div class="social-container">

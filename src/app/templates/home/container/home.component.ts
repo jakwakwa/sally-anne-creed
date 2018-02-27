@@ -79,11 +79,11 @@ export class HomeComponent implements OnInit {
     });
 
     this.homeService.getApp().content.subscribe('courses', {
-      orderByChild: 'courseFeatured',
+      orderByChild: 'featured',
       equalTo: true,
       populate: [
         {
-          field: 'courseMainImg'
+          field: 'mainImg'
         }
       ]
      }, (error, content) => {
