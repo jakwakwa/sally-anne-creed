@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-article-intro',
@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['article-intro.component.scss']
 })
 
-export class ArticleIntroComponent {}
+export class ArticleIntroComponent {
+    // GET|SET event
+    private _content: any;
+    get content(): any {
+        return this._content;
+    }
+    @Input()
+    set content(value: any) {
+        this._content = value;
+    }
+}

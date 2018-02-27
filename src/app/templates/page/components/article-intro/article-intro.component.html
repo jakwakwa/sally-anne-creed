@@ -1,11 +1,12 @@
-<div>
+<div *ngFor="let item of content;">
+<!-- <div> -->
   <div class="article-img">
-    <img src="http://via.placeholder.com/500x850">
+    <img src="{{ item?.mainImg[0].url }}">
   </div>
   <div class="content-container">
-    <h2 class="title">Article Title</h2>
-    <p class="meta">Posted by USER123 on DATE in CATEGORIES</p>
-    <p class="article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime tempora nam quod? Facere ex quas eos nemo, aperiam, quo numquam, quia voluptatum sunt veniam esse veritatis odio quasi voluptate quisquam! Facere ex quas eos nemo, aperiam, quo numquam, quia voluptatum sunt veniam esse veritatis odio quasi voluptate quisquam! Facere ex quas eos nemo, aperiam, quo numquam, quia voluptatum sunt veniam esse veritatis odio quasi voluptate quisquam!</p>
+    <h2 class="title">{{ item.title }}</h2>
+    <p class="meta">Posted by {{ item.author }} on {{ item.__meta__.createdDate | date: 'd MMMM y' }} in {{ item.category[0].categoryName }}</p>
+    <p class="article-text" [innerHtml]="item.contentIntro"></p>
     <div class="social-container">
       <div class="share-btn">Share</div>
       <img class="share-icon" src="/assets/img/share-icon.svg" alt="">
