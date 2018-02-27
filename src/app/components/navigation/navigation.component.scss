@@ -13,6 +13,10 @@ nav {
     margin: 0 20px 0 20px;
     color: #fff;
     cursor: pointer;
+
+    &.active {
+      font-weight: 700;
+    }
   }
   .logo {
     margin: 0 60px 0 60px;

@@ -15,17 +15,20 @@ import { FooterComponent } from './components/footer/footer.component';
 // Routing
 import { HomeComponent } from './templates/home/container/home.component';
 import { PageComponent } from './templates/page/container/page.component';
+import { NotFoundComponent } from './not-found.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '', component: PageComponent, pathMatch: 'full' }
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'page', component: PageComponent, pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     // Angular Modules
