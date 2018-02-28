@@ -19,7 +19,7 @@ import { NotFoundComponent } from './not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'page', component: PageComponent, pathMatch: 'full' },
+  { path: 'page/:type', component: PageComponent, pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
 

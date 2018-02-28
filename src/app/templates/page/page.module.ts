@@ -15,6 +15,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 // service
 import { PageService } from './page.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PageService } from './page.service';
   imports: [
     CommonModule,
     AngularFireLite.forRoot(firebaseConfig),
-    MailerSignupModule
+    MailerSignupModule,
+    RouterModule
   ],
   exports: [
     PageComponent

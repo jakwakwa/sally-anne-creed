@@ -12,9 +12,9 @@ export class NavigationComponent {
     { path: '/blog', label: 'Blog'}
   ];
   linksRight = [
-    { path: '/courses', label: 'Courses'},
-    { path: '/recipes', label: 'Recipes'},
-    { path: '/contact', label: 'Contact'}
+    { path: 'page/courses', label: 'Courses'},
+    { path: 'page/recipes', label: 'Recipes'},
+    { path: 'page/contact', label: 'Contact'}
   ];
   logo: string = 'assets/img/sac-logo.png';
 }

@@ -16,4 +16,14 @@ export class ArticleIntroComponent {
     set content(value: any) {
         this._content = value;
     }
+
+    private _type: string;
+    get type(): string {
+        return this._type;
+    }
+    @Input()
+    set type(value: string) {
+        this._type = value;
+        console.log(value);
+    }
 }

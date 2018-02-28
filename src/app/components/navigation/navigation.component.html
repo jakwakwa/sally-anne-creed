@@ -1,7 +1,7 @@
 <nav id="top">
   <div class="nav-left">
     <a
-    routerLink="/"
+    [routerLink]="['/']"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }">
       Home
@@ -10,15 +10,16 @@
       Shop Online
     </a>
     <a
-      routerLink="/page"
+      [routerLink]="['page/blog']"
       routerLinkActive="active"
       >
-      Page
+      Blog
     </a>
   </div>
   <img [src]="logo" class="logo" alt="">
   <div class="nav-right">
-    <a *ngFor="let link of linksRight">
+    <a *ngFor="let link of linksRight" [routerLink]="[link.path]" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">
       {{link.label}}
     </a>
   </div>
