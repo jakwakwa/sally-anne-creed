@@ -1,0 +1,56 @@
+.article-img {
+  margin-bottom: 60px;
+  height: 350px;
+  width: 843px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+.content-container {
+
+  .title {
+    color: rgb(185, 20, 50);
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .meta {
+    margin-bottom: 24px;
+  }
+
+  .article-text {
+    line-height: 24px;
+  }
+
+  .social-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+
+    .share-btn {
+      color: rgb(185, 20, 50);
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      width: 50px;
+    }
+
+    .share-icon {
+      margin-top: -6px;
+      margin-left: 10px;
+      width: 32px;
+      height: 32px;
+    }
+
+    img {
+      margin-top: -6px;
+      margin-left: 30px;
+    }
+  }
+}
