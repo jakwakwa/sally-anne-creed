@@ -1,4 +1,4 @@
-<div *ngFor="let item of content;">
+<div *ngFor="let item of content | paginate: { itemsPerPage: 3, currentPage: p }">
   <div class="article-img">
     <img src="{{ item?.mainImg[0].url }}">
   </div>
@@ -19,3 +19,4 @@
   </div>
   <hr>
 </div>
+<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>

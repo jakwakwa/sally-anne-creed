@@ -63,3 +63,58 @@
     line-height: 1;
   }
 }
+
+.my-pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+
+.my-pagination /deep/ {
+  .ngx-pagination {
+    .current {
+      background: rgb(185, 20, 50);
+    }
+    .pagination-previous {
+
+      &.disabled {
+        span {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      a {
+        color: rgb(185, 20, 50);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      a:hover {
+        background: none;
+        text-decoration: none;
+      }
+    }
+    .pagination-next {
+      float: right;
+
+      &.disabled {
+        span {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      a {
+        color: rgb(185, 20, 50);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      a:hover {
+        background: none;
+        text-decoration: none;
+      }
+    }
+  }
+}

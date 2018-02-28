@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 // imports for services (from firebase)
 import { firebaseConfig } from '../../app.firebase.config';
 import { AngularFireLite } from 'angularfire-lite';
@@ -28,7 +28,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     AngularFireLite.forRoot(firebaseConfig),
     MailerSignupModule,
-    RouterModule
+    RouterModule,
+    NgxPaginationModule
   ],
   exports: [
     PageComponent
