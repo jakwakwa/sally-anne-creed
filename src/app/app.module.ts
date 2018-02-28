@@ -6,6 +6,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 // Custom Modules:
 import { HomeModule } from './templates/home/home.module';
 import { PageModule } from './templates/page/page.module';
+import { ArticleModule } from './templates/article/article.module';
 // Components
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -36,7 +37,8 @@ const routes: Routes = [
     Ng2PageScrollModule,
     // Custom Modules
     HomeModule,
-    PageModule
+    PageModule,
+    ArticleModule
 
   ],
   providers: [],
