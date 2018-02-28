@@ -3,15 +3,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
-// Custom
+// Custom Modules:
 import { HomeModule } from './templates/home/home.module';
 import { PageModule } from './templates/page/page.module';
-
+// Components
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-
 // Routing
 import { HomeComponent } from './templates/home/container/home.component';
 import { PageComponent } from './templates/page/container/page.component';

@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   linksLeft = [
-    { path: '/about', label: 'About'},
-    { path: '/shop-online', label: 'Shop Online'},
-    { path: '/blog', label: 'Blog'}
+    { path: '/', label: 'About'},
+    { path: '/', label: 'Shop Online'},
+    { path: 'page/blog', label: 'Blog'}
   ];
   linksRight = [
     { path: 'page/courses', label: 'Courses'},
