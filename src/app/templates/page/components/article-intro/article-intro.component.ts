@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ArticleIntroComponent {
-    // GET|SET event
+    // GET|SET for content data
     private _content: any;
     get content(): any {
         return this._content;
@@ -17,6 +17,7 @@ export class ArticleIntroComponent {
         this._content = value;
     }
 
+    // GET/SET for types
     private _type: string;
     get type(): string {
         return this._type;
