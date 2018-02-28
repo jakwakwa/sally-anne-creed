@@ -15,10 +15,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './templates/home/container/home.component';
 import { PageComponent } from './templates/page/container/page.component';
 import { NotFoundComponent } from './not-found.component';
+import { ArticleComponent } from './templates/article/container/article.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'page/:type', component: PageComponent, pathMatch: 'full' },
+  { path: 'page/:type/:id', component: ArticleComponent, pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -39,7 +41,6 @@ const routes: Routes = [
     HomeModule,
     PageModule,
     ArticleModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

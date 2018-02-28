@@ -23,6 +23,8 @@ export class PageComponent {
 
       this.pageType = params.type;
 
+      // console.log('Params type:', params)
+
       if (this.pageType.toLowerCase() === 'blog') {
 
         this.pageService.getApp().content.subscribe('blog', {
