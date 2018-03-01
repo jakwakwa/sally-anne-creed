@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { ArticleService } from '../article.service';
 
+import { ArticleContent } from '../../article/models/article.interface';
+
 @Component({
   selector: 'app-article',
   templateUrl: 'article.component.html',
@@ -9,10 +11,11 @@ import { ArticleService } from '../article.service';
 })
 export class ArticleComponent {
 
-  articleId;
-  pageType;
+  articleId: number;
+  pageType: string;
+  
   // initializer for data object
-  data: any = [];
+  data: ArticleContent;
 
   constructor (
     private router: Router,
@@ -24,10 +27,6 @@ export class ArticleComponent {
       this.pageType = params.type;
       this.articleId = params.id;
 
-      // return console.log('Params', params.id )
-
-        console.log(this.articleId);
-        console.log('page type', this.pageType);
       if (this.pageType.toLowerCase() === 'blog') {
         this.articleService.getApp().content.subscribe('blog',
         {

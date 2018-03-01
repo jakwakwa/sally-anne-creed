@@ -1,20 +1,12 @@
-<!-- <div>Article View Works</div> -->
+<!-- <div style="width: 800px;"><pre>{{ content | json }}</pre></div> -->
 <div>
   <div class="article-img">
-    <img src="{{content.mainImg[0].url}}">
+    <img src="{{ content?.mainImg[0].url }}">
   </div>
   <div class="content-container">
-    <h2 class="title">{{ content.title }}</h2>
-    <p class="meta">Posted by {{ content.author }} on {{ content.__meta__.createdDate |  date: 'd MMMM y' }} in {{ content.category[0].categoryName }}</p>
-    <div class="social-container">
-      <div class="share-btn">Share</div>
-      <img class="share-icon" src="/assets/img/share-icon.svg" alt="">
-      <img src="/assets/img/fb-icon.png">
-      <img src="/assets/img/twitter-icon.png">
-      <img src="/assets/img/google-plus-icon.png">
-      <img src="/assets/img/email-icon.png">
-    </div>
-    <p class="article-text" [innerHtml]="content.content"></p>
+    <h2 class="title">{{ content?.title }}</h2>
+    <p class="meta">Posted by {{ content?.author }} on {{ content?.__meta__.createdDate |  date: 'd MMMM y' }} in {{ content?.category[0].categoryName }}</p>
+    <p class="article-text" [innerHtml]="content?.content"></p>
     <div class="social-container">
       <div class="share-btn">Share</div>
       <img class="share-icon" src="/assets/img/share-icon.svg" alt="">
