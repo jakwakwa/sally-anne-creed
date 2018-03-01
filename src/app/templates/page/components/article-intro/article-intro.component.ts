@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { ArticleContent } from '../../models/articles.interface';
+
 @Component({
   selector: 'app-article-intro',
   templateUrl: 'article-intro.component.html',
@@ -11,12 +13,12 @@ export class ArticleIntroComponent {
   p: number = 1;
 
   // GET|SET for content data
-  private _content: any;
-  get content(): any {
+  private _content: ArticleContent;
+  get content(): ArticleContent {
       return this._content;
   }
   @Input()
-  set content(value: any) {
+  set content(value: ArticleContent) {
       this._content = value;
   }
 

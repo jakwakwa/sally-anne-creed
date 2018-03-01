@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ArticleContent } from '../../models/article.interface';
 
 @Component({
   selector: 'app-article-view',
@@ -7,12 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ArticleViewComponent {
   // GET|SET for content data
-  private _content: any;
-  get content(): any {
+  private _content: ArticleContent;
+  get content(): ArticleContent {
       return this._content;
   }
   @Input()
-  set content(value: any) {
+  set content(value: ArticleContent) {
       this._content = value;
   }
 }
