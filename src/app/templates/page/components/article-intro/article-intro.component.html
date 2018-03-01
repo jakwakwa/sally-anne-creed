@@ -1,3 +1,4 @@
+<!-- <div><pre>{{ content | json }}</pre></div> -->
 <div *ngFor="let item of content | paginate: { itemsPerPage: 3, currentPage: p }">
   <div class="article-img">
     <img src="{{ item?.mainImg[0].url }}">
