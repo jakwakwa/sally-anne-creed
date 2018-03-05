@@ -3,8 +3,8 @@
     <h2>Featured Blogs</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero, quam dolor eligendi quas esse dolore molestias quae veniam similique delectus perferendis blanditiis fugiat nemo.</p>
   </div>
-  <app-featured-cards [content]="content"></app-featured-cards>
+  <app-featured-cards [content]="content" [type]="type"></app-featured-cards>
   <div class="feat-btn-container">
-    <button>All Blogs</button>
+    <button [routerLink]="['/blog/']">All Blogs</button>
   </div>
 </div>

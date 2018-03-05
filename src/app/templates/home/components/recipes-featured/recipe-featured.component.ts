@@ -17,4 +17,7 @@ export class RecipeFeaturedComponent {
       this._content = value;
   }
 
+  @Input()
+  type;
+
 }

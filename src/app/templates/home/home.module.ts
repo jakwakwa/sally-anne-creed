@@ -23,6 +23,7 @@ import { RecipeFeaturedComponent } from './components/recipes-featured/recipe-fe
 import { BlogsFeaturedComponent } from './components/blogs-featured/blogs-featured.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+import { RouterModule } from '@angular/router';
 // service
 import { HomeService } from './home.service';
 // re-usable component module
@@ -47,6 +48,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     NgxCarouselModule,
     FormsModule,
     AngularFireLite.forRoot(firebaseConfig),
+    RouterModule,
     LoadingSpinnerModule,
     MailerSignupModule
   ],

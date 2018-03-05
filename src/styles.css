@@ -34,7 +34,10 @@ li {
   line-height: 30px;
 }
 a {
-  color: #9f72e6;
+  /* color: #9f72e6; */
+  text-decoration: none;
+}
+a:hover {
   text-decoration: none;
 }
 input,

@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class FeaturedCardsComponent {
 
+  p: number = 1;
+
   // GET|SET event
   private _content: any;
   get content(): any {
@@ -15,7 +17,9 @@ export class FeaturedCardsComponent {
   @Input()
   set content(value: any) {
       this._content = value;
-      console.log('Featured Cards', value);
   }
+
+  @Input()
+  type;
 
 }

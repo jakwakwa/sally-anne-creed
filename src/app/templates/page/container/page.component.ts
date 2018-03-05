@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PageService } from '../page.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-page',
@@ -37,6 +38,7 @@ export class PageComponent {
           }
           this.data = Object.keys(content).map(key => content[key]);
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
+          $("html, body").animate({scrollTop:0}, 500);
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
@@ -52,6 +54,7 @@ export class PageComponent {
           }
           this.data = Object.keys(content).map(key => content[key]);
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
+          $("html, body").animate({scrollTop:0}, 500);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -67,6 +70,7 @@ export class PageComponent {
           }
           this.data = Object.keys(content).map(key => content[key]);
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
+          $("html, body").animate({scrollTop:0}, 500);
         });
 
       } else {

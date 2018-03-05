@@ -18,5 +18,4 @@ export class CoursesFeaturedComponent {
   set courses(value: Array<CoursesFeatured>) {
       this._courses = value;
   }
-
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { HomeService } from '../home.service';
+
 
 @Component({
   selector: 'app-home',
@@ -14,8 +17,18 @@ export class HomeComponent implements OnInit {
   courseData: any = [];
   blogsData: any = [];
   showSpinner: boolean = true;
+  // gets used in parameterised routing
+  blogType: string = 'blog';
+  recipeType: string = 'recipes';
 
-  constructor(private homeService: HomeService) { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private homeService: HomeService) {
+      // this.route.params.subscribe( params => {
+      //   this.pageType = params.type;
+      // });
+    }
 
   ngOnInit() {
     this.homeService.getApp().content.subscribe('home', {
@@ -77,6 +90,7 @@ export class HomeComponent implements OnInit {
 
       // console.log('recipes', content);
       this.blogsData = Object.keys(content).map(key => content[key]);
+
 
     });
 

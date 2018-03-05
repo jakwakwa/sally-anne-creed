@@ -1,14 +1,16 @@
 <div class="content clearfix">
   <div *ngFor="let item of content;">
-    <div class="article"
-    [class.main]="item.mainFeatured">
-      <div class="image">
-        <img class="main-img" src="{{ item?.mainImg[0].url }}"/>
+    <a [routerLink]="['/'+ type, item.id]">
+      <div class="article"
+      [class.main]="item.mainFeatured">
+        <div class="image">
+          <img class="main-img" src="{{ item?.mainImg[0].url }}"/>
+        </div>
+        <div class="text">
+          <div class="title">{{ item.title }}</div>
+          <img class="featured-arrow" src="/assets/img/arrow.svg">
+        </div>
       </div>
-      <div class="text">
-        <div class="title">{{ item.title }}</div>
-        <img class="featured-arrow" src="/assets/img/arrow.svg">
-      </div>
-    </div>
+    </a>
   </div>
 </div>

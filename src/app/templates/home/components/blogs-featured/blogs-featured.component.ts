@@ -16,4 +16,9 @@ export class BlogsFeaturedComponent {
   set content(value: Array<Featured>) {
       this._content = value;
   }
+
+  @Input()
+  type;
+
+
 }
