@@ -3,14 +3,16 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { ArticleService } from '../article.service';
 
 import { ArticleContent } from '../../article/models/article.interface';
-declare var jquery:any;
-declare var $ :any;
+import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-article',
   templateUrl: 'article.component.html',
   styleUrls: ['article.component.scss']
 })
+
 export class ArticleComponent {
 
   articleId: number;
@@ -42,7 +44,8 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
-          window.scrollTo(0, 0);
+          // after read more is clicked page will scroll to top of the article
+          $("html, body").animate({scrollTop:530}, 500);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -58,7 +61,8 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
-          window.scrollTo(0, 0);
+          // after read more is clicked page will scroll to top of the article
+          $("html, body").animate({scrollTop:530}, 500);
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
@@ -74,8 +78,8 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
-          window.scrollTo(0, 0);
-          // $("window").animate({ scrollTop: 0 }, 1000);
+          // after read more is clicked page will scroll to top of the article
+          $("html, body").animate({scrollTop:530}, 500);
         });
       } else {
         this.router.navigate(['/']);
