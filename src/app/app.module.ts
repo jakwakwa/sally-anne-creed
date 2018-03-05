@@ -19,8 +19,8 @@ import { ArticleComponent } from './templates/article/container/article.componen
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'page/:type', component: PageComponent, pathMatch: 'full' },
-  { path: 'page/:type/:id', component: ArticleComponent, pathMatch: 'full' },
+  { path: ':type', component: PageComponent, pathMatch: 'full' },
+  { path: ':type/:id', component: ArticleComponent, pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
 

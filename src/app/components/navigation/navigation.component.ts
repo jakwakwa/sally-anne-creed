@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   linksLeft = [
-    { path: 'page/about', label: 'About'},
-    { path: 'page/shop-online', label: 'Shop Online'},
-    { path: 'page/blog', label: 'Blog'}
+    { path: 'about', label: 'About'},
+    { path: 'shop-online', label: 'Shop Online'},
+    { path: 'blog', label: 'Blog'}
   ];
   linksRight = [
-    { path: 'page/courses', label: 'Courses'},
-    { path: 'page/recipes', label: 'Recipes'},
-    { path: 'page/contact', label: 'Contact'}
+    { path: 'courses', label: 'Courses'},
+    { path: 'recipes', label: 'Recipes'},
+    { path: 'contact', label: 'Contact'}
   ];
   logo: string = 'assets/img/sac-logo.png';
 }
