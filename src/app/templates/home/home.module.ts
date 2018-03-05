@@ -15,6 +15,7 @@ import { HomeComponent } from './container/home.component';
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { AboutComponent } from './components/about/about.component';
 import { ShopComponent } from './components/shop/shop.component';
+// import { LoadingSpinnerComponent } from '../../components/loading-spinner/loading-spinner.component';
 // import { MailerSignupComponent } from '../../components/mailer-signup/mailer-signup.component';
 import { FeaturedCardsComponent } from './components/featured-cards/featured-cards.component';
 import { CoursesFeaturedComponent } from './components/courses-featured/courses-featured.component';
@@ -26,6 +27,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeService } from './home.service';
 // re-usable component module
 import { MailerSignupModule } from '../../components/mailer-signup/mailer-signup.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { MailerSignupModule } from '../../components/mailer-signup/mailer-signup
     NgxCarouselModule,
     FormsModule,
     AngularFireLite.forRoot(firebaseConfig),
+    LoadingSpinnerModule,
     MailerSignupModule
   ],
   exports: [

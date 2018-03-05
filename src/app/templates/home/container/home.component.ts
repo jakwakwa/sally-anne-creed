@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   recipeData: any = [];
   courseData: any = [];
   blogsData: any = [];
+  showSpinner: boolean = true;
 
   constructor(private homeService: HomeService) { }
 
@@ -39,6 +40,7 @@ export class HomeComponent implements OnInit {
 
       // console.log('home', content);
       this.data = content;
+      this.homeService.getApp().content.subscribe( () => this.showSpinner = false )
 
     });
 
