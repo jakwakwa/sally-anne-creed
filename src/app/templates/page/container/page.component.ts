@@ -13,6 +13,7 @@ export class PageComponent {
   pageType;
   // initializer for data object
   data: any = [];
+  showSpinner: boolean = true;
 
   constructor (
     private router: Router,
@@ -35,6 +36,7 @@ export class PageComponent {
             console.error(error);
           }
           this.data = Object.keys(content).map(key => content[key]);
+          this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
@@ -49,6 +51,7 @@ export class PageComponent {
             console.error(error);
           }
           this.data = Object.keys(content).map(key => content[key]);
+          this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -63,6 +66,7 @@ export class PageComponent {
             console.error(error);
           }
           this.data = Object.keys(content).map(key => content[key]);
+          this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
         });
 
       } else {

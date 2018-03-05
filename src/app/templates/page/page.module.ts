@@ -18,6 +18,7 @@ import { PageService } from './page.service';
 import { RouterModule } from '@angular/router';
 
 // reusable component modules
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 import { HeaderModule } from '../../components/header/header.module';
 import { SidebarModule } from '../../components/sidebar/sidebar.module';
 
@@ -33,6 +34,7 @@ import { SidebarModule } from '../../components/sidebar/sidebar.module';
     AngularFireLite.forRoot(firebaseConfig),
     MailerSignupModule,
     HeaderModule,
+    LoadingSpinnerModule,
     SidebarModule,
     RouterModule,
     NgxPaginationModule
