@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { ArticleService } from '../article.service';
 
 import { ArticleContent } from '../../article/models/article.interface';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-article',
@@ -13,7 +15,7 @@ export class ArticleComponent {
 
   articleId: number;
   pageType: string;
-  
+
   // initializer for data object
   data: ArticleContent;
 
@@ -40,6 +42,7 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+          window.scrollTo(0, 0);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -55,6 +58,7 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+          window.scrollTo(0, 0);
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
@@ -70,6 +74,8 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+          window.scrollTo(0, 0);
+          // $("window").animate({ scrollTop: 0 }, 1000);
         });
       } else {
         this.router.navigate(['/']);
