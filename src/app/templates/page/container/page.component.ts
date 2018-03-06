@@ -8,8 +8,8 @@ import * as $ from 'jquery';
   templateUrl: 'page.component.html',
   styleUrls: ['page.component.scss']
 })
-export class PageComponent {
 
+export class PageComponent {
   // gets used in parameterised routing
   pageType;
   // initializer for data object
