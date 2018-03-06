@@ -15,4 +15,5 @@ import { LoadingSpinnerComponent } from './loading-spinner.component';
     LoadingSpinnerComponent
   ]
 })
+
 export class LoadingSpinnerModule {}
