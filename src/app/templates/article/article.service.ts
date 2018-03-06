@@ -3,8 +3,8 @@ import * as flamelink from 'flamelink';
 import { AngularFireLiteApp } from 'angularfire-lite';
 
 @Injectable()
-export class ArticleService {
 
+export class ArticleService {
   // GET|SET _flApp
   private _flApp: any = {};
   get flApp(): any {
@@ -21,6 +21,7 @@ export class ArticleService {
       env: 'production',
       locale: 'en-US'
     });
+
   }
 
   getApp() {
