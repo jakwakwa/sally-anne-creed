@@ -7,6 +7,7 @@ import { AngularFireLiteApp } from 'angularfire-lite';
 export class ArticleService {
   // GET|SET _flApp
   private _flApp: any = {};
+
   get flApp(): any {
       return this._flApp;
   }
@@ -15,13 +16,11 @@ export class ArticleService {
   }
 
   constructor(private _fa: AngularFireLiteApp) {
-
     this.flApp = flamelink({
       firebaseApp: _fa.instance(),
       env: 'production',
       locale: 'en-US'
     });
-
   }
 
   getApp() {
