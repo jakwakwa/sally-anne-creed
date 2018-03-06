@@ -6,12 +6,14 @@ import { Featured } from '../../models/featured.interface';
   templateUrl: 'blogs-featured.component.html',
   styleUrls: ['blogs-featured.component.scss']
 })
+
 export class BlogsFeaturedComponent {
-  // GET|SET event
+  // GET event
   private _content: Array<Featured>;
   get content(): Array<Featured> {
       return this._content;
   }
+  // SET event
   @Input()
   set content(value: Array<Featured>) {
       this._content = value;
@@ -19,6 +21,4 @@ export class BlogsFeaturedComponent {
 
   @Input()
   type;
-
-
 }
