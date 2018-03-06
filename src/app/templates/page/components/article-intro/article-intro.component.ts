@@ -9,8 +9,6 @@ import { ArticleContent } from '../../models/articles.interface';
 
 export class ArticleIntroComponent {
 
-  p: number = 1;
-
   // GET|SET for content data
   private _content: ArticleContent;
   get content(): ArticleContent {
