@@ -9,21 +9,20 @@ import { ShopProduct } from '../../models/shop.interface';
 })
 export class ShopComponent implements OnInit {
 
-  // GET|SET event
+  carouselBanner;
+
+  // GET event
   private _content: Array<ShopProduct>;
   get content(): Array<ShopProduct> {
       return this._content;
   }
+  // SET event
   @Input()
   set content(value: Array<ShopProduct>) {
       this._content = value;
-      // console.log('ShopSlider', this._content);
   }
 
-  carouselBanner;
-
   ngOnInit(){
-
     this.carouselBanner = {
       grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
       slide: 1,
