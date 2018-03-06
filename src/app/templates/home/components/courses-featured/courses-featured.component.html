@@ -1,23 +1,23 @@
 <div class="coursesFeat-container section-space">
-    <div class="title-container">
-      <h2>Latest Courses</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero, quam dolor eligendi quas esse dolore molestias quae veniam similique delectus perferendis blanditiis fugiat nemo.</p>
-    </div>
-    <div class="coursesFeat-content">
-      <div *ngFor="let course of courses;">
-        <a [routerLink]="['/courses', course.id]">
-          <div class="article">
-            <div class="text col">
-              <h3>{{ course.title }}</h3>
-              <p [innerHtml]="course.contentIntro"></p>
-              <img class="featured-arrow" src="/assets/img/arrow-blue.svg" alt="">
-            </div>
-            <div class="image col"><img src="{{ course.mainImg[0].url }}" alt=""></div>
+  <div class="title-container">
+    <h2>Latest Courses</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero, quam dolor eligendi quas esse dolore molestias quae veniam similique delectus perferendis blanditiis fugiat nemo.</p>
+  </div>
+  <div class="coursesFeat-content">
+    <div *ngFor="let course of courses;">
+      <a [routerLink]="['/courses', course.id]">
+        <div class="article">
+          <div class="text col">
+            <h3>{{ course.title }}</h3>
+            <p [innerHtml]="course.contentIntro"></p>
+            <img class="featured-arrow" src="/assets/img/arrow-blue.svg" alt="">
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="coursesFeat-btn-container">
-      <button [routerLink]="['/courses/']">All Courses</button>
+          <div class="image col"><img src="{{ course.mainImg[0].url }}" alt=""></div>
+        </div>
+      </a>
     </div>
   </div>
+  <div class="coursesFeat-btn-container">
+    <button [routerLink]="['/courses/']">All Courses</button>
+  </div>
+</div>
