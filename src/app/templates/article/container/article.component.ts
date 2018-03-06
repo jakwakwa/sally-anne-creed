@@ -5,8 +5,6 @@ import { ArticleService } from '../article.service';
 import { ArticleContent } from '../../article/models/article.interface';
 import * as $ from 'jquery';
 
-
-
 @Component({
   selector: 'app-article',
   templateUrl: 'article.component.html',
@@ -15,6 +13,7 @@ import * as $ from 'jquery';
 
 export class ArticleComponent {
 
+  // used for Routing
   articleId: number;
   pageType: string;
 
