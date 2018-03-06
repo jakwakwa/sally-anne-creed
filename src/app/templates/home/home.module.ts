@@ -3,14 +3,11 @@ import { CommonModule } from '@angular/common';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import { FormsModule } from '@angular/forms';
-
 // imports for services (from firebase)
 import { firebaseConfig } from '../../app.firebase.config';
 import { AngularFireLite } from 'angularfire-lite';
-
 // containers
 import { HomeComponent } from './container/home.component';
-
 // components
 import { HomeSliderComponent } from './components/home-slider/home-slider.component';
 import { AboutComponent } from './components/about/about.component';
@@ -22,7 +19,7 @@ import { CoursesFeaturedComponent } from './components/courses-featured/courses-
 import { RecipeFeaturedComponent } from './components/recipes-featured/recipe-featured.component';
 import { BlogsFeaturedComponent } from './components/blogs-featured/blogs-featured.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+// Router
 import { RouterModule } from '@angular/router';
 // service
 import { HomeService } from './home.service';
@@ -59,4 +56,5 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     HomeService
   ]
 })
+
 export class HomeModule {}
