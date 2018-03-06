@@ -14,6 +14,9 @@ export class PageComponent {
   pageType;
   // initializer for data object
   data: any = [];
+  // categories data from firebase
+  categories: any;
+
   showSpinner: boolean = true;
 
   constructor (
@@ -41,6 +44,14 @@ export class PageComponent {
           $("html, body").animate({scrollTop:0}, 500);
         });
 
+        this.pageService.getApp().content.subscribe('blogCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
+          // console.log('Blog Categories',this.categories);
+        });
+
       } else if (this.pageType.toLowerCase() === 'recipes') {
 
         this.pageService.getApp().content.subscribe('recipes', {
@@ -55,6 +66,13 @@ export class PageComponent {
           this.data = Object.keys(content).map(key => content[key]);
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
           $("html, body").animate({scrollTop:0}, 500);
+        });
+
+        this.pageService.getApp().content.subscribe('recipeCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -73,9 +91,26 @@ export class PageComponent {
           $("html, body").animate({scrollTop:0}, 500);
         });
 
+        this.pageService.getApp().content.subscribe('courseCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
+        });
+
       } else {
         this.router.navigate(['/']);
       }
     });
+  }
+
+  ngOnInit() {
+    // this.pageService.getApp().content.subscribe('blogCategories', (error, content) => {
+    //   if (error) {
+    //     console.error(error);
+    //   }
+    //   this.categories = Object.keys(content).map(key => content[key]);
+    //   console.log('Blog Categories',this.categories);
+    // });
   }
 }

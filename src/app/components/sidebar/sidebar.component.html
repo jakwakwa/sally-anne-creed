@@ -6,11 +6,8 @@
   <hr>
   <div class="sidebar-section">
     <h4>Categories</h4>
-    <ul>
-      <li>Category 1</li>
-      <li>Category 2</li>
-      <li>Category 3</li>
-      <li>Category 4</li>
+    <ul *ngFor="let item of list">
+      <li>{{ item.categoryName }}</li>
     </ul>
   </div>
   <hr>
