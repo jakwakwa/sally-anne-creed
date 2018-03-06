@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: 'featured-cards.component.html',
   styleUrls: ['featured-cards.component.scss']
 })
+
 export class FeaturedCardsComponent {
   // GET|SET event
   private _content: any;

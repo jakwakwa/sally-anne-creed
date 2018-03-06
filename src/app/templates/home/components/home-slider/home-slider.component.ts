@@ -9,17 +9,17 @@ import { Slider } from '../../models/slider.interface';
 })
 export class HomeSliderComponent implements OnInit {
 
-    // GET|SET event
-    private _content: Array<Slider>;
-    get content(): Array<Slider> {
-        return this._content;
-    }
-    @Input()
-    set content(value: Array<Slider>) {
-        this._content = value;
-    }
-
   carouselBanner;
+
+  // GET|SET event
+  private _content: Array<Slider>;
+  get content(): Array<Slider> {
+      return this._content;
+  }
+  @Input()
+  set content(value: Array<Slider>) {
+      this._content = value;
+  }
 
   ngOnInit(){
 
