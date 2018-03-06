@@ -44,62 +44,47 @@ export class HomeComponent implements OnInit {
       if (error) {
         console.error(error);
       }
-
       this.data = content;
       this.homeService.getApp().content.subscribe( () => this.showSpinner = false )
-
     });
 
     this.homeService.getApp().content.subscribe('recipes', {
       orderByChild: 'featured',
       equalTo: true,
       populate: [
-        {
-          field: 'mainImg'
-        }
+        { field: 'mainImg' }
       ]
-     }, (error, content) => {
+    }, (error, content) => {
       if (error) {
         console.error(error);
-      }
-
+    }
       this.recipeData = Object.keys(content).map(key => content[key]);
-
     });
 
     this.homeService.getApp().content.subscribe('blog', {
       orderByChild: 'featured',
       equalTo: true,
       populate: [
-        {
-          field: 'mainImg'
-        }
+        { field: 'mainImg' }
       ]
-     }, (error, content) => {
+    }, (error, content) => {
       if (error) {
         console.error(error);
-      }
-
-      this.blogsData = Object.keys(content).map(key => content[key]);
-
+    }
+    this.blogsData = Object.keys(content).map(key => content[key]);
     });
 
     this.homeService.getApp().content.subscribe('courses', {
       orderByChild: 'featured',
       equalTo: true,
       populate: [
-        {
-          field: 'mainImg'
-        }
+        { field: 'mainImg' }
       ]
-     }, (error, content) => {
+    }, (error, content) => {
       if (error) {
         console.error(error);
-      }
-
-      this.courseData = Object.keys(content).map(key => content[key]);
-
+    }
+    this.courseData = Object.keys(content).map(key => content[key]);
     });
   }
-
 }
