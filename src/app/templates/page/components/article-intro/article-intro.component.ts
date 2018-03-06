@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { ArticleContent } from '../../models/articles.interface';
 
 @Component({
@@ -15,21 +14,21 @@ export class ArticleIntroComponent {
   // GET|SET for content data
   private _content: ArticleContent;
   get content(): ArticleContent {
-      return this._content;
-  }
-  @Input()
-  set content(value: ArticleContent) {
-      this._content = value;
+    return this._content;
   }
 
+  @Input()
+  set content(value: ArticleContent) {
+    this._content = value;
+  }
   // GET/SET for types
   private _type: string;
   get type(): string {
-      return this._type;
+    return this._type;
   }
+
   @Input()
   set type(value: string) {
-      this._type = value;
-      console.log(value);
+    this._type = value;
   }
 }
