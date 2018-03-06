@@ -19,6 +19,17 @@ export class SidebarComponent {
       this._list = value;
   }
 
+  // GET|SET event
+  private _titles: any;
+  get titles(): any {
+      return this._titles;
+  }
+
+  @Input()
+  set titles(value: any) {
+      this._titles = value;
+  }
+
   // constructor() {
   //   this.list = {}
   // }

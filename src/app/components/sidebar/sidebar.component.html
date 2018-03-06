@@ -14,18 +14,14 @@
   <div class="sidebar-section">
     <h4>Latest Posts</h4>
     <ul>
-      <li>Blog Article 1</li>
-      <li>Blog Article 2</li>
-      <li>Blog Article 3</li>
+      <li *ngFor="let title of titles">{{ title.title }}</li>
     </ul>
   </div>
   <hr>
   <div class="sidebar-section">
     <h4>Most Popular Posts</h4>
     <ul>
-      <li>Blog Article 22</li>
-      <li>Blog Article 65</li>
-      <li>Blog Article 12</li>
+      <li>Still to do...</li>
     </ul>
   </div>
 </aside>

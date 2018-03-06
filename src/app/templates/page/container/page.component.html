@@ -3,7 +3,7 @@
 <div class="container articles">
   <div class="row">
     <app-article-intro [content]="data" [type]="pageType" class="col"></app-article-intro>
-    <app-sidebar [list]="categories" class="col"></app-sidebar>
+    <app-sidebar [titles]="data" [list]="categories" class="col"></app-sidebar>
   </div>
 </div>
 <app-mailer></app-mailer>
