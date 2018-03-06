@@ -11,7 +11,6 @@ import { ArticleModule } from './templates/article/article.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-// import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 // Routing
 import { HomeComponent } from './templates/home/container/home.component';
 import { PageComponent } from './templates/page/container/page.component';
@@ -20,6 +19,7 @@ import { ArticleComponent } from './templates/article/container/article.componen
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'shop', component: NotFoundComponent, pathMatch: 'full' },
   { path: ':type', component: PageComponent, pathMatch: 'full' },
   { path: ':type/:id', component: ArticleComponent, pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
@@ -46,4 +46,5 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}

@@ -4,8 +4,10 @@ hr {
 }
 
 aside {
+
   .search-container {
     position: relative;
+
     .search-box {
       padding: 18px 16px 18px 16px;
       background: none;
@@ -15,6 +17,7 @@ aside {
       height: 50px;
       width: 100%;
     }
+
     .search-btn {
       background: none;
       background: url('/assets/img/search-icon.svg');
@@ -29,6 +32,7 @@ aside {
       cursor: pointer;
     }
   }
+
   .sidebar-section {
     h4 {
       font-size: 22px;
