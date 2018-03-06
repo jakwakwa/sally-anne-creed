@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-// imports for services (from firebase)
-import { firebaseConfig } from '../../app.firebase.config';
-import { AngularFireLite } from 'angularfire-lite';
 
 // containers
 import { HeaderComponent } from './header.component';
@@ -14,9 +9,7 @@ import { HeaderComponent } from './header.component';
     HeaderComponent,
   ],
   imports: [
-    CommonModule,
-    FormsModule,
-    AngularFireLite.forRoot(firebaseConfig)
+    CommonModule
   ],
   exports: [
     HeaderComponent
