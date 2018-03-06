@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router, ActivatedRoute } from '@angular/router';
-
 import { HomeService } from '../home.service';
-
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
   data: any = {};
@@ -24,11 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private homeService: HomeService) {
-      // this.route.params.subscribe( params => {
-      //   this.pageType = params.type;
-      // });
-    }
+    private homeService: HomeService) { }
 
   ngOnInit() {
     this.homeService.getApp().content.subscribe('home', {
@@ -51,7 +45,6 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
 
-      // console.log('home', content);
       this.data = content;
       this.homeService.getApp().content.subscribe( () => this.showSpinner = false )
 
@@ -70,7 +63,6 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
 
-      // console.log('recipes', content);
       this.recipeData = Object.keys(content).map(key => content[key]);
 
     });
@@ -88,9 +80,7 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
 
-      // console.log('recipes', content);
       this.blogsData = Object.keys(content).map(key => content[key]);
-
 
     });
 
@@ -107,7 +97,6 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
 
-      // console.log('recipes', content);
       this.courseData = Object.keys(content).map(key => content[key]);
 
     });
