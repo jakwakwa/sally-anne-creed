@@ -16,11 +16,10 @@ export class ArticleComponent {
   // used for Routing
   articleId: number;
   pageType: string;
-
   // initializer for data object
   data: ArticleContent;
   // for sidebar categories
-  categories: any;
+  categories: any = [];
   // for... latest posts
   sortedDate: any = [];
 
@@ -61,7 +60,7 @@ export class ArticleComponent {
             console.error(error);
           }
           this.categories = Object.keys(content).map(key => content[key]);
-          // console.log('Blog Categories',this.categories);
+          console.log('Blog Categories',this.categories);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
