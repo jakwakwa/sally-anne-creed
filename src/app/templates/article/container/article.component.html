@@ -2,7 +2,7 @@
 <div class="container articles">
   <div class="row">
     <app-article-view [content]="data" class="col"></app-article-view>
-    <app-sidebar [latestPosts]="sortedDate" [list]="categories" class="col"></app-sidebar>
+    <app-sidebar [latestPosts]="sortedDate" [type]="pageType" [list]="categories" class="col"></app-sidebar>
   </div>
 </div>
 <app-mailer></app-mailer>

@@ -14,7 +14,9 @@
   <div class="sidebar-section">
     <h4>Latest Posts</h4>
     <ul>
-      <li *ngFor="let title of latestPosts">{{ title.title }}</li>
+      <li *ngFor="let title of latestPosts">
+        <a [routerLink]="['/'+ type, title.id]" href="">{{ title.title }}</a>
+      </li>
     </ul>
   </div>
   <hr>

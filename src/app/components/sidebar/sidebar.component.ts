@@ -33,5 +33,14 @@ export class SidebarComponent {
   set latestPosts(value: any) {
       this._latestPosts = value;
   }
+  // GET/SET for types
+  private _type: string;
+  get type(): string {
+    return this._type;
+  }
 
+  @Input()
+  set type(value: string) {
+    this._type = value;
+  }
 }
