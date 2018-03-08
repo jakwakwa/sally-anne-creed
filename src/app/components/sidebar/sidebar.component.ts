@@ -13,7 +13,6 @@ export class SidebarComponent {
   get list(): any {
       return this._list;
   }
-
   @Input()
   set list(value: any) {
       this._list = value;
@@ -25,12 +24,14 @@ export class SidebarComponent {
       return this._titles;
   }
 
+  // GET|SET event
+  private _latestPosts: any;
+  get latestPosts(): any {
+      return this._latestPosts;
+  }
   @Input()
-  set titles(value: any) {
-      this._titles = value;
+  set latestPosts(value: any) {
+      this._latestPosts = value;
   }
 
-  // constructor() {
-  //   this.list = {}
-  // }
 }

@@ -19,6 +19,10 @@ export class ArticleComponent {
 
   // initializer for data object
   data: ArticleContent;
+  // for sidebar categories
+  categories: any;
+  // for... latest posts
+  sortedDate: any = [];
 
   constructor (
     private router: Router,
@@ -43,8 +47,21 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
+        });
+
+        this.articleService.getApp().content.subscribe('blogCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
+          // console.log('Blog Categories',this.categories);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
@@ -60,8 +77,20 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
+        });
+
+        this.articleService.getApp().content.subscribe('courseCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
@@ -77,8 +106,20 @@ export class ArticleComponent {
             console.error(error);
           }
           this.data = content[this.articleId];
+
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
+        });
+
+        this.articleService.getApp().content.subscribe('recipeCategories', (error, content) => {
+          if (error) {
+            console.error(error);
+          }
+          this.categories = Object.keys(content).map(key => content[key]);
         });
       } else {
         this.router.navigate(['/']);

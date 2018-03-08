@@ -14,6 +14,7 @@ export class PageComponent {
   pageType;
   // initializer for data object
   data: any = [];
+  sortedDate: any = [];
   // categories data from firebase
   categories: any;
 
@@ -39,8 +40,15 @@ export class PageComponent {
           if (error) {
             console.error(error);
           }
+          // get data as array of objects
           this.data = Object.keys(content).map(key => content[key]);
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
+          // when this data loads the spinner will switch to false
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
+          // When routing activates this will trigger scroll to top of the window
           $("html, body").animate({scrollTop:0}, 500);
         });
 
@@ -64,6 +72,12 @@ export class PageComponent {
             console.error(error);
           }
           this.data = Object.keys(content).map(key => content[key]);
+
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
+
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
           $("html, body").animate({scrollTop:0}, 500);
         });
@@ -87,6 +101,12 @@ export class PageComponent {
             console.error(error);
           }
           this.data = Object.keys(content).map(key => content[key]);
+
+          // get sorteddata as array of objects first
+          this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
+          // then, sort by Latest Post
+          this.sortedDate.sort((a, b) => new Date(b.__meta__.createdDate).getTime() - new Date(a.__meta__.createdDate).getTime());
+
           this.pageService.getApp().content.subscribe( () => this.showSpinner = false )
           $("html, body").animate({scrollTop:0}, 500);
         });
