@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { ArticleService } from '../article.service';
-
 import { ArticleContent } from '../../article/models/article.interface';
 import * as $ from 'jquery';
 
@@ -19,34 +18,33 @@ export class ArticleComponent {
   // initializer for data object
   data: ArticleContent;
   // for sidebar categories
-  categories: any = [];
+  categories: Array<any> = [];
   // for... latest posts
-  sortedDate: any = [];
+  sortedDate: Array<any> = [];
 
   constructor (
     private router: Router,
     private route: ActivatedRoute,
-    private articleService: ArticleService
-  ) {
+    private articleService: ArticleService ) {
+
     this.route.params.subscribe( params => {
 
       this.pageType = params.type;
       this.articleId = params.id;
 
       if (this.pageType.toLowerCase() === 'blog') {
-        this.articleService.getApp().content.subscribe('blog',
-        {
+
+        this.articleService.getApp().content.subscribe('blog', {
           populate: [
             { field: 'category' },
             { field: 'mainImg' }
           ]
-        }
-        , (error, content) => {
+        }, (error, content) => {
           if (error) {
             console.error(error);
           }
+          // get data for the article with id that relates to param id
           this.data = content[this.articleId];
-
           // get sorteddata as array of objects first
           this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
           // then, sort by Latest Post
@@ -54,29 +52,27 @@ export class ArticleComponent {
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
         });
-
+        // fetch Categories for Blogs
         this.articleService.getApp().content.subscribe('blogCategories', (error, content) => {
           if (error) {
             console.error(error);
           }
           this.categories = Object.keys(content).map(key => content[key]);
-          console.log('Blog Categories',this.categories);
         });
 
       } else if (this.pageType.toLowerCase() === 'courses') {
-        this.articleService.getApp().content.subscribe('courses',
-        {
+
+        this.articleService.getApp().content.subscribe('courses', {
           populate: [
             { field: 'category' },
             { field: 'mainImg' }
           ]
-        }
-        , (error, content) => {
+        }, (error, content) => {
           if (error) {
             console.error(error);
           }
+          // get data for the article with id that relates to param id
           this.data = content[this.articleId];
-
           // get sorteddata as array of objects first
           this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
           // then, sort by Latest Post
@@ -84,7 +80,7 @@ export class ArticleComponent {
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
         });
-
+        // fetch Categories for Courses
         this.articleService.getApp().content.subscribe('courseCategories', (error, content) => {
           if (error) {
             console.error(error);
@@ -93,19 +89,18 @@ export class ArticleComponent {
         });
 
       } else if (this.pageType.toLowerCase() === 'recipes') {
-        this.articleService.getApp().content.subscribe('recipes',
-        {
+
+        this.articleService.getApp().content.subscribe('recipes', {
           populate: [
             { field: 'category' },
             { field: 'mainImg' }
           ]
-        }
-        , (error, content) => {
+        }, (error, content) => {
           if (error) {
             console.error(error);
           }
+          // get data for the article with id that relates to param id
           this.data = content[this.articleId];
-
           // get sorteddata as array of objects first
           this.sortedDate = Object.keys(content).map(key => content[key]).slice(1);
           // then, sort by Latest Post
@@ -113,7 +108,7 @@ export class ArticleComponent {
           // after read more is clicked page will scroll to top of the article
           $("html, body").animate({scrollTop:530}, 500);
         });
-
+        // fetch Categories for Recipes
         this.articleService.getApp().content.subscribe('recipeCategories', (error, content) => {
           if (error) {
             console.error(error);
